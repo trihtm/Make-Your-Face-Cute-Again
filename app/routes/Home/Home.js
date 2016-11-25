@@ -9,7 +9,7 @@ export default class Home extends Component {
     return (
       <View style={{margin: 128}}>
         <Text>This is Home</Text>
-        <Text onPress={goToCamera}>Do you want to go to Camera? Press here.</Text>
+        <Text onPress={goToCamera}>Do you want to go to Camera? Press here. hello 12312</Text>
       </View>
     )
   }

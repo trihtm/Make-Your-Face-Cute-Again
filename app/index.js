@@ -8,7 +8,7 @@ import {
 import { Router, Scene } from 'react-native-router-flux';
 
 import Home from './routes/Home';
-import Camera from './routes/Camera';
+import CameraPage from './routes/Camera';
 
 export default class MakeYourFaceCuteAgain extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class MakeYourFaceCuteAgain extends Component {
       <Router>
         <Scene key="root">
           <Scene key="home" component={Home} title="Home" initial={true} />
-          <Scene key="camera" component={Camera} title="Camera" />
+          <Scene key="camera" component={CameraPage} title="Camera" />
         </Scene>
       </Router>
     )
