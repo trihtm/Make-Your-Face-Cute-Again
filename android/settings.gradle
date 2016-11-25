@@ -1,0 +1,3 @@
+rootProject.name = 'ReactNativeHackathon'
+
+include ':app'
