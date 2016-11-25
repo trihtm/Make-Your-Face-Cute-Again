@@ -1,3 +1,3 @@
-import Camera from './Camera';
+import CameraPage from './CameraPage';
 
-export default Camera;
+export default CameraPage;

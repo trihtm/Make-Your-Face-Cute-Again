@@ -9,13 +9,11 @@ export default class Home extends Component {
   
     return (
       <View style={styles.container}>
-
         <Text style={styles.appName}> Make your face cute again </Text>
 
         <TouchableOpacity style={styles.btnCamera} onPress={goToCamera}>
             <Image  style={styles.icoCamera} source={require('../../images/icoCamera.png')} />
         </TouchableOpacity>
-
       </View>
     )
   }
