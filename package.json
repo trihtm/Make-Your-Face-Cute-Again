@@ -7,6 +7,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "gl-react": "^2.2.8",
+    "gl-react-image": "0.0.2",
+    "gl-react-instagramfilters": "^0.2.0",
+    "gl-react-native": "^2.38.0",
     "native-base": "^0.5.15",
     "react": "15.4.1",
     "react-native": "0.38.0",

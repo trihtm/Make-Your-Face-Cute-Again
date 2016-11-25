@@ -9,6 +9,8 @@ import {
   View,
 } from 'react-native';
 
+import {Actions} from 'react-native-router-flux';
+
 import Camera from 'react-native-camera';
 
 const styles = StyleSheet.create({
@@ -66,8 +68,8 @@ export default class CameraPage extends Component {
     this.state = {
       camera: {
         aspect: Camera.constants.Aspect.fill,
-        captureTarget: Camera.constants.CaptureTarget.cameraRoll,
-        type: Camera.constants.Type.front,
+        captureTarget: Camera.constants.CaptureTarget.disk,
+        type: Camera.constants.Type.back,
         orientation: Camera.constants.Orientation.auto,
         flashMode: Camera.constants.FlashMode.auto,
       },
@@ -84,7 +86,11 @@ export default class CameraPage extends Component {
   takePicture() {
     if (this.camera) {
       this.camera.capture()
-        .then((data) => console.log(data))
+        .then((data) => {
+          Actions.save({
+            path: data.path
+          });
+        })
         .catch(err => console.error(err));
     }
   }
@@ -195,6 +201,14 @@ export default class CameraPage extends Component {
           mirrorImage={false}
         />
         <View style={[styles.overlay, styles.topOverlay]}>
+          <TouchableOpacity
+              style={styles.typeButton}
+              onPress={this.switchType}
+          >
+            <Image
+                source={this.typeIcon}
+            />
+          </TouchableOpacity>
           <TouchableOpacity
             style={styles.flashButton}
             onPress={this.switchFlash}
