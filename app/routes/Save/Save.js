@@ -141,7 +141,7 @@ export default class Save extends Component
     }
 
     sharePicture() {
-        console.log('Share picture.');
+        Actions.share();
     }
 
     render() {
