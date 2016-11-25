@@ -196,14 +196,6 @@ export default class CameraPage extends Component {
         />
         <View style={[styles.overlay, styles.topOverlay]}>
           <TouchableOpacity
-            style={styles.typeButton}
-            onPress={this.switchType}
-          >
-            <Image
-              source={this.typeIcon}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
             style={styles.flashButton}
             onPress={this.switchFlash}
           >
@@ -226,28 +218,6 @@ export default class CameraPage extends Component {
             </TouchableOpacity>
             ||
             null
-          }
-          <View style={styles.buttonsSpace} />
-          {
-              !this.state.isRecording
-              &&
-              <TouchableOpacity
-                  style={styles.captureButton}
-                  onPress={this.startRecording}
-              >
-                <Image
-                    source={require('./../../images/ic_videocam_36pt.png')}
-                />
-              </TouchableOpacity>
-              ||
-              <TouchableOpacity
-                  style={styles.captureButton}
-                  onPress={this.stopRecording}
-              >
-                <Image
-                    source={require('./../../images/ic_stop_36pt.png')}
-                />
-              </TouchableOpacity>
           }
         </View>
       </View>
