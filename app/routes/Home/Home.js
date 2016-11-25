@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Button, Image } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, Button, Image, StatusBar } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
 export default class Home extends Component {
@@ -8,13 +8,21 @@ export default class Home extends Component {
     const goToCamera = () => Actions.camera({text: 'Hello World!'}); 
   
     return (
-      <View style={styles.container}>
-        <Text style={styles.appName}> Make your face cute again </Text>
 
-        <TouchableOpacity style={styles.btnCamera} onPress={goToCamera}>
+      <Image style={styles.container} source={require('../../images/background.jpg')} >
+        <StatusBar hidden={true} />
+        <View style={styles.title}>
+          <Text style={styles.normalText}> Make your face </Text>
+          <View style={styles.lineTwo}>
+            <Text style={styles.strongText}>CUTE</Text>
+            <Text style={styles.normalText}> again </Text>
+          </View>
+        </View>
+      
+        <TouchableOpacity style={styles.btnCamera} onPress={goToHistory}>
             <Image  style={styles.icoCamera} source={require('../../images/icoCamera.png')} />
         </TouchableOpacity>
-      </View>
+      </Image>
     )
   }
 }
@@ -23,17 +31,34 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#ac84e8',
-    top: 50,
     justifyContent: 'space-around',
     alignItems: 'center',
+    top: 50,
+    width: null,
+    height: null,
   },
 
-  appName: {
+  title:{
+    justifyContent: 'flex-start',
+    top: -30,
+  },
+
+  lineTwo: {
+    justifyContent:'flex-end',
+    flexDirection: 'row',
+  },
+
+  normalText: {
     color: '#fff',
-    justifyContent: 'center',
-    fontFamily: 'Arial',
-    fontSize: 25,
+    fontSize: 40,
+    fontFamily: 'Pacifico',
+    top: 20,
+  },
+
+  strongText: {
+    color: '#fff',
+    fontSize: 60,
+    fontFamily: 'Pacifico',
   },
 
   btnCamera: {
@@ -46,8 +71,8 @@ const styles = StyleSheet.create({
   },
 
   icoCamera: {
-    width: 50,
-    height: 50,
+    width:70,
+    height: 70,
     justifyContent: 'center',
     alignItems: 'center',
   }
