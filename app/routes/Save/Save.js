@@ -123,8 +123,8 @@ export default class Save extends Component
                 return <Brannan>{image}</Brannan>;
                 break;
 
-            case 'Earlybird':
-                return <Earlybird>{image}</Earlybird>;
+            case 'Rise':
+                return <Rise>{image}</Rise>;
                 break;
 
             case 'F1977':
@@ -184,8 +184,8 @@ export default class Save extends Component
                 />
 
                 <Button
-                    onPress={() => this.filterPicture('Earlybird')}
-                    title="Earlybird"
+                    onPress={() => this.filterPicture('Rise')}
+                    title="Rise"
                     color="#FFF"
                 />
             </View>
