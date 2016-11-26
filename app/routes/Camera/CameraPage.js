@@ -184,10 +184,6 @@ export default class CameraPage extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar
-          animated
-          hidden
-        />
         <Camera
           ref={(cam) => {
             this.camera = cam;

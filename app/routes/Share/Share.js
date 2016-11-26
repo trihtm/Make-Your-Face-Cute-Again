@@ -26,7 +26,7 @@ export default class Share extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    top: 50,
+    top: 100,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     color: '#212e42',
     fontSize: 20,
     alignItems: 'center',
-    fontFamily: 'Lucidas',
+    fontFamily: 'Arial',
   },
 
   wrapper: {

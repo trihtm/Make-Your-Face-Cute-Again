@@ -4,22 +4,11 @@ import { Actions } from 'react-native-router-flux';
 
 export default class Home extends Component {
   render() {
-    const goToHistory = () => Actions.history(); 
     const goToCamera = () => Actions.camera({text: 'Hello World!'}); 
   
     return (
-
       <Image style={styles.container} source={require('../../images/background.jpg')} >
-        <StatusBar hidden={true} />
-        <View style={styles.title}>
-          <Text style={styles.normalText}> Make your face </Text>
-          <View style={styles.lineTwo}>
-            <Text style={styles.strongText}>CUTE</Text>
-            <Text style={styles.normalText}> again </Text>
-          </View>
-        </View>
-      
-        <TouchableOpacity style={styles.btnCamera} onPress={goToHistory}>
+        <TouchableOpacity style={styles.btnCamera} onPress={() => goToCamera()}>
             <Image  style={styles.icoCamera} source={require('../../images/icoCamera.png')} />
         </TouchableOpacity>
       </Image>
@@ -33,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-around',
     alignItems: 'center',
-    top: 50,
+    top: 0,
     width: null,
     height: null,
   },
@@ -51,17 +40,18 @@ const styles = StyleSheet.create({
   normalText: {
     color: '#fff',
     fontSize: 40,
-    fontFamily: 'Pacifico',
+    fontFamily: 'Arial',
     top: 20,
   },
 
   strongText: {
     color: '#fff',
     fontSize: 60,
-    fontFamily: 'Pacifico',
+    fontFamily: 'Arial',
   },
 
   btnCamera: {
+    top: 150,
     width: 100,
     height: 100,
     backgroundColor: '#eff0f2',
