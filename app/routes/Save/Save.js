@@ -115,8 +115,8 @@ export default class Save extends Component
             imageSize={this.state.imageSize} />;
 
         switch (this.state.activeFilter) {
-            case 'Amaro':
-                return <Amaro>{image}</Amaro>;
+            case 'Valencia':
+                return <Valencia>{image}</Valencia>;
                 break;
 
             case 'Brannan':
@@ -160,8 +160,8 @@ export default class Save extends Component
 
             <View style={[styles.overlay, styles.filterOverlay]}>
                 <Button
-                    onPress={() => this.filterPicture('Amaro')}
-                    title="Amaro"
+                    onPress={() => this.filterPicture('Valencia')}
+                    title="Valencia"
                     color="#FFF"
                 />
 
